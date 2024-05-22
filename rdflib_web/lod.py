@@ -49,7 +49,7 @@ from flask import Flask, Blueprint, render_template, request, \
     make_response, redirect, url_for, g, Response, session, current_app
 
 from werkzeug.routing import BaseConverter
-from werkzeug.urls import url_quote
+from urllib.parse import quote as url_quote
 
 from jinja2 import contextfilter, Markup
 

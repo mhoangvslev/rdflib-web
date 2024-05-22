@@ -33,5 +33,6 @@ setup(
 install_requires = [
     'flask',
     'rdflib>=4.0',
-    'python-mimeparse'
+    'python-mimeparse',
+    'jinja2<=3.0.3'
 ]
