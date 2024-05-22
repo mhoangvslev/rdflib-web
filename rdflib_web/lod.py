@@ -715,11 +715,14 @@ def _main(g, out, opts):
     if '-n' in opts:
         types=None
 
-    get(g, types=types, dbname=dbname).run(host="0.0.0.0", debug=debug)
+    if '-p' in opts:
+        port = int(opts['-p'])
+
+    get(g, types=types, dbname=dbname).run(host="0.0.0.0", port=port, debug=debug)
 
 def main():
     from rdflib.extras.cmdlineutils import main as cmdmain
-    cmdmain(_main, options='t:ndN:', stdin=False)
+    cmdmain(_main, options='t:ndN:p:', stdin=False)
 
 if __name__=='__main__':
     main()
