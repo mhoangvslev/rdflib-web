@@ -24,11 +24,11 @@ or get the application object yourself by called :py:func:`get` function
 
 """
 try:
-    from flask import ( Blueprint, Flask, render_template, request, make_response,
-        Markup, g, url_for, current_app )
+    from flask import Blueprint, Flask, render_template, request, make_response, g, url_for, current_app
 except:
     raise Exception("Flask not found - install with 'easy_install flask'")
 
+from markupsafe import Markup
 import rdflib
 
 import sys
